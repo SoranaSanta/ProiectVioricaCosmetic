@@ -1,0 +1,10 @@
+{
+    "java.configuration.updateBuildConfiguration": "interactive",
+    "cucumberautocomplete.steps": [
+        "proiect/src/test/java/definitions/*.java"
+    ],
+    "cucumberautocomplete.syncfeatures": "proiect/src/test/resources/features/*.feature",
+    "cucumberautocomplete.strictGherkinCompletion": true,
+    "cucumberautocomplete.smartSnippets": true,
+    "cucumberautocomplete.stepsInvariants": true
+}

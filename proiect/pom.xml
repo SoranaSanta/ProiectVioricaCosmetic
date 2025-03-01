@@ -18,7 +18,7 @@
     <maven.compiler.target>23</maven.compiler.target>
   </properties>
 
-  <dependencies>
+<dependencies>
   <dependency>
     <groupId>org.testng</groupId>
     <artifactId>testng</artifactId>
@@ -43,7 +43,7 @@
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>4.11</version>
+      <version>4.13.1</version>
       <scope>test</scope>
     </dependency>
 
@@ -96,8 +96,7 @@
     </dependency>
 
   </dependencies>
-
-  <build>
+<build>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
         <!-- clean lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->

@@ -68,11 +68,11 @@ public class VioricaCosmeticTests
         creatiUnCont.click();
         //completam formularul de register
         WebElement numeUtilizator = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("nasa_reg_username")));
-        numeUtilizator.sendKeys("SoranaSanta113");
+        numeUtilizator.sendKeys("SoranaSanta120");
         WebElement email = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("nasa_reg_email")));
-        email.sendKeys("sorana.chiorean+113@gmail.com");
+        email.sendKeys("sorana.chiorean+120@gmail.com");
         WebElement parola = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("nasa_reg_password")));
-        parola.sendKeys("Parola113!");
+        parola.sendKeys("Parola120!");
         WebElement dataNasterii = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("account_dob")));
         dataNasterii.sendKeys("10101989");
         //debifam abonarea la newsletter
@@ -210,11 +210,11 @@ public class VioricaCosmeticTests
         }     
         
         WebElement parolaActuala = driver.findElement(By.id("password_current"));
-        parolaActuala.sendKeys("Parola112!");
+        parolaActuala.sendKeys("Parola120!");
         WebElement parolaNoua = driver.findElement(By.id("password_1"));
-        parolaNoua.sendKeys("Parola112@");
+        parolaNoua.sendKeys("Parola120@");
         WebElement confirmareParolaNoua = driver.findElement(By.id("password_2"));
-        confirmareParolaNoua.sendKeys("Parola112@");
+        confirmareParolaNoua.sendKeys("Parola120@");
         WebElement salveazaModificarile = driver.findElement(By.name("save_account_details"));
         actions.moveToElement(salveazaModificarile).click().perform();
 

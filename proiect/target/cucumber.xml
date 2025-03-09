@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="112.497" tests="5" skipped="0" failures="0" errors="0">
-<testcase classname="Add product to cart" name="User adds to the cart the first product from the &quot;Creme&quot; category" time="17.049">
+<testsuite name="Cucumber" time="127.999" tests="5" skipped="0" failures="0" errors="0">
+<testcase classname="Add product to cart" name="User adds to the cart the first product from the &quot;Creme&quot; category" time="22.42">
 <system-out><![CDATA[
 Given the user opens the browser............................................passed
 And the user navigates to the Creme page....................................passed
@@ -12,7 +12,7 @@ Then the correct product name and price will be displayed in the cart.......pass
 And the user closes the browser.............................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Delivery and Return" name="User clicks delivery and return button and a popup containg the right information appears" time="18.336">
+<testcase classname="Delivery and Return" name="User clicks delivery and return button and a popup containg the right information appears" time="21.264">
 <system-out><![CDATA[
 Given the user opens the browser............................................passed
 And the user navigates to the homepage......................................passed
@@ -24,7 +24,7 @@ Then the correct information is displayed...................................pass
 And the user closes the browser.............................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Create a new account" name="User is able to create a new account with valid credentials" time="28.365">
+<testcase classname="Create a new account" name="User is able to create a new account with valid credentials" time="28.673">
 <system-out><![CDATA[
 Given the user opens the browser............................................passed
 And the user navigates to the homepage......................................passed
@@ -37,7 +37,7 @@ Then the new account is created.............................................pass
 And the user closes the browser.............................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Add a product review" name="User is not able to add a review for a product without score" time="25.435">
+<testcase classname="Add a product review" name="User is not able to add a review for a product without score" time="27.777">
 <system-out><![CDATA[
 Given the user opens the browser............................................passed
 And the user navigates to the homepage......................................passed
@@ -50,7 +50,7 @@ Then the review is not added and error message appears......................pass
 And the user closes the browser.............................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Update password" name="User updates their password successfully" time="22.959">
+<testcase classname="Update password" name="User updates their password successfully" time="27.486">
 <system-out><![CDATA[
 Given the user opens the browser............................................passed
 And the user navigates to the edit account page.............................passed

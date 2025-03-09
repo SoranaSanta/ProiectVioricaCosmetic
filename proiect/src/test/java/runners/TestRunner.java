@@ -15,7 +15,7 @@ import io.cucumber.junit.CucumberOptions;
         "junit:target/cucumber.xml" // Generates a JUnit XML report
     },
     monochrome = true, // Improves readability of console output
-    tags = "@viorica" //runs all scenarios. to run specific test use @viorica1 - @viorica5
+    tags = "@viorica1" //runs all scenarios. to run specific test use @viorica1 - @viorica5
     )
 
 public class TestRunner {

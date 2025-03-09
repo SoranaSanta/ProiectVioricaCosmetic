@@ -82,11 +82,11 @@ public class VioricaDefinitions {
     public void userCompletesAllMandatoryFields() {
         //completam formularul de register
         WebElement numeUtilizator = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("nasa_reg_username")));
-        numeUtilizator.sendKeys("SoranaSanta120");
+        numeUtilizator.sendKeys("SoranaSanta124");
         WebElement email = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("nasa_reg_email")));
-        email.sendKeys("sorana.chiorean+120@gmail.com");
+        email.sendKeys("sorana.chiorean+124@gmail.com");
         WebElement parola = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("nasa_reg_password")));
-        parola.sendKeys("Parola120!");
+        parola.sendKeys("Parola124!");
         WebElement dataNasterii = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("account_dob")));
         dataNasterii.sendKeys("10101989");
         //debifam abonarea la newsletter
@@ -98,13 +98,14 @@ public class VioricaDefinitions {
     }
 
     @Then("the new account is created")
-    public void newAccountIsCreated() {
-        //dam din nou click pe login/register si verificam titlul paginii
-        //asteptam din nou sa se incarce pagina
-        WebElement continut = driver.findElement(By.id("main-content"));
-        wait.until(ExpectedConditions.stalenessOf(continut));
+    public void newAccountIsCreated() {      
         WebElement loginRegister = driver.findElement(By.cssSelector("[href=\"https://vioricacosmetic.ro/contul-meu/\"]"));
-        loginRegister.click();
+        //asteptam din nou sa se incarce pagina
+        wait.until(ExpectedConditions.stalenessOf(loginRegister));
+        //luam din nou butonul si dam click pe el
+        WebElement loginRegisterDupaReincarcare = driver.findElement(By.cssSelector("[href=\"https://vioricacosmetic.ro/contul-meu/\"]"));
+        loginRegisterDupaReincarcare.click();
+        //comparam titlul paginii
         String title = driver.getTitle();
         assertEquals("Contul meu - Viorica Cosmetic Romania", title);
     }

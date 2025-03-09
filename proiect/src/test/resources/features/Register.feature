@@ -11,3 +11,5 @@ Feature: Create a new account
       And the user completes all the mandatory fields
     Then the new account is created
       And the user closes the browser
+
+      

@@ -142,9 +142,9 @@ public class VioricaDefinitions {
     @Then("the correct product name and price will be displayed in the cart")
     public void checkCorrectProduct() {
         //comparam numele primului produs din pagina cu numele primului produs din cos
-        WebElement produsAdaugat = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"cart-sidebar\"]/div[2]/div[1]/div/div/div[2]/div/div[1]/a")));
+        WebElement produsCos = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"cart-sidebar\"]/div[2]/div[1]/div/div/div[2]/div/div[1]/a")));
         //pe pagina numele este cu majuscule, aducem la acelasi format
-        assertEquals(numeProdus, produsAdaugat.getText().toUpperCase());
+        assertEquals(numeProdus, produsCos.getText().toUpperCase());
         //verificam pretul
         WebElement pretCos = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"cart-sidebar\"]/div[2]/div[1]/div/div/div[2]/div/div[2]/div[1]/div[2]/span")));
         assertEquals(pretProdus, pretCos.getText());

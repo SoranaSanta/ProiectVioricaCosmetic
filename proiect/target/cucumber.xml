@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="84.595" tests="1" skipped="0" failures="0" errors="0">
-<testcase classname="Create a new account" name="User is able to create a new account with valid credentials" time="83.813">
+<testsuite name="Cucumber" time="14.364" tests="1" skipped="0" failures="0" errors="0">
+<testcase classname="Add product to cart" name="User adds to the cart the first product from the &quot;Creme&quot; category" time="14.133">
 <system-out><![CDATA[
 Given the user opens the browser............................................passed
-And the user navigates to the homepage......................................passed
+And the user navigates to the Creme page....................................passed
 And the user accepts cookies................................................passed
 And the user closes newsletter popup........................................passed
-When the user opens the login popup.........................................passed
-And the user opens the register form........................................passed
-And the user completes all the mandatory fields.............................passed
-Then the new account is created.............................................passed
+When the user chooses the first product.....................................passed
+And the user adds the product to the cart...................................passed
+Then the correct product name and price will be displayed in the cart.......passed
 And the user closes the browser.............................................passed
 ]]></system-out>
 </testcase>

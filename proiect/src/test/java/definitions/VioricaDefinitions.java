@@ -30,7 +30,7 @@ public class VioricaDefinitions {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--incognito");
         driver = new ChromeDriver(options);
-        driver.manage().timeouts().implicitlyWait(Duration.ofMillis(5000));
+        driver.manage().timeouts().implicitlyWait(Duration.ofMillis(10000));
         driver.manage().window().maximize();
         wait = new WebDriverWait(driver, Duration.ofSeconds(20));
         actions = new Actions(driver);
@@ -82,11 +82,11 @@ public class VioricaDefinitions {
     public void userCompletesAllMandatoryFields() {
         //completam formularul de register
         WebElement numeUtilizator = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("nasa_reg_username")));
-        numeUtilizator.sendKeys("SoranaSanta124");
+        numeUtilizator.sendKeys("SoranaSanta126");
         WebElement email = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("nasa_reg_email")));
-        email.sendKeys("sorana.chiorean+124@gmail.com");
+        email.sendKeys("sorana.chiorean+126@gmail.com");
         WebElement parola = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("nasa_reg_password")));
-        parola.sendKeys("Parola124!");
+        parola.sendKeys("Parola126!");
         WebElement dataNasterii = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("account_dob")));
         dataNasterii.sendKeys("10101989");
         //debifam abonarea la newsletter
@@ -196,9 +196,9 @@ public class VioricaDefinitions {
     @When("the user logins")
     public void login() {
         WebElement numeUtilizator = driver.findElement(By.id("username"));
-        numeUtilizator.sendKeys("sorana.chiorean+120@gmail.com");
+        numeUtilizator.sendKeys("sorana.chiorean+126@gmail.com");
         WebElement parola = driver.findElement(By.id("password"));
-        parola.sendKeys("Parola120!");
+        parola.sendKeys("Parola126!");
         WebElement autentificare = driver.findElement(By.cssSelector("button[name=\"login\"]"));
         actions.moveToElement(autentificare).click().perform();
     }
@@ -213,11 +213,11 @@ public class VioricaDefinitions {
 
         //completam parola actuala si cea noua
         WebElement parolaActuala = driver.findElement(By.id("password_current"));
-        parolaActuala.sendKeys("Parola120!");
+        parolaActuala.sendKeys("Parola126!");
         WebElement parolaNoua = driver.findElement(By.id("password_1"));
-        parolaNoua.sendKeys("Parola120@");
+        parolaNoua.sendKeys("Parola126@");
         WebElement confirmareParolaNoua = driver.findElement(By.id("password_2"));
-        confirmareParolaNoua.sendKeys("Parola120@");
+        confirmareParolaNoua.sendKeys("Parola126@");
 
         WebElement salveazaModificarile = driver.findElement(By.name("save_account_details"));
         actions.moveToElement(salveazaModificarile).click().perform();

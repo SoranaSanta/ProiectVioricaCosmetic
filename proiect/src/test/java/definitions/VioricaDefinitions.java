@@ -161,9 +161,11 @@ public class VioricaDefinitions {
 
     @When("the user chooses the first best-seller product")
     public void chooseFirstBestseller() {
-        //gasim imaginea primului produs si dam click pe ea
+        //gasim toate imaginile de produse  
         List<WebElement> produse = driver.findElements(By.className("link-absolute"));
-        actions.moveToElement(produse.get(0)).click().perform();
+        //alegem prima imagine si dam click pe ea 
+        WebElement primulProdus = produse.get(0);
+        actions.moveToElement(primulProdus).click().perform();
     }
 
     @When("the user opens the delivery and return popup")

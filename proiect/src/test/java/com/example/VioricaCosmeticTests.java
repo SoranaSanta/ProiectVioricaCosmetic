@@ -162,9 +162,11 @@ public class VioricaCosmeticTests
         WebElement inchiderePopupDupaReincarcare = wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("mc-closeModal")));
         inchiderePopupDupaReincarcare.click();
         
-        //gasim imaginea primului produs si dam click pe ea
+        //gasim toate imaginile de produse  
         List<WebElement> produse = driver.findElements(By.className("link-absolute"));
-        actions.moveToElement(produse.get(0)).click().perform();
+        //alegem prima imagine si dam click pe ea 
+        WebElement primulProdus = produse.get(0);
+        actions.moveToElement(primulProdus).click().perform();
 
         //gasim delivery & return si dam click
         WebElement deliveryReturn = wait.until(ExpectedConditions.visibilityOfElementLocated(By.partialLinkText("Delivery & Return")));

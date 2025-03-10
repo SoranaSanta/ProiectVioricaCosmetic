@@ -53,14 +53,14 @@ public class VioricaCosmeticTests
         WebElement permiteTotul = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"cs_preview_popup\"]/div/div/div[2]/div[1]/div/div/div[2]/div/button[2]")));
         permiteTotul.click();
         //inchidem newsletter pop-up
-        //ne asiguram ca s-a reincarcat pagina
-        WebElement continut = driver.findElement(By.id("main-content"));
-        wait.until(ExpectedConditions.stalenessOf(continut));
+        WebElement inchiderePopup = driver.findElement(By.className("mc-closeModal"));
+        //asteptam din nou sa se incarce pagina
+        wait.until(ExpectedConditions.stalenessOf(inchiderePopup));
         //miscam mouse-ul ca sa apara popup newsletter
         actions.scrollByAmount(0, 10).build().perform();
-        //inchidem popup
-        WebElement inchiderePopup = wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("mc-closeModal")));
-        inchiderePopup.click();
+        //luam din nou butonul si dam click pe el
+        WebElement inchiderePopupDupaReincarcare = wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("mc-closeModal")));
+        inchiderePopupDupaReincarcare.click();
         
         //deschidem pop-up de login/register
         WebElement loginRegister = driver.findElement(By.cssSelector("[href=\"https://vioricacosmetic.ro/contul-meu/\"]"));
@@ -108,14 +108,14 @@ public class VioricaCosmeticTests
         WebElement permiteTotul = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"cs_preview_popup\"]/div/div/div[2]/div[1]/div/div/div[2]/div/button[2]")));
         permiteTotul.click();
         //inchidem newsletter pop-up
-        //ne asiguram ca s-a reincarcat pagina
-        WebElement continut = driver.findElement(By.id("main-content"));
-        wait.until(ExpectedConditions.stalenessOf(continut));
+        WebElement inchiderePopup = driver.findElement(By.className("mc-closeModal"));
+        //asteptam din nou sa se incarce pagina
+        wait.until(ExpectedConditions.stalenessOf(inchiderePopup));
         //miscam mouse-ul ca sa apara popup newsletter
         actions.scrollByAmount(0, 10).build().perform();
-        //inchidem popup
-        WebElement inchiderePopup = wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("mc-closeModal")));
-        inchiderePopup.click();
+        //luam din nou butonul si dam click pe el
+        WebElement inchiderePopupDupaReincarcare = wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("mc-closeModal")));
+        inchiderePopupDupaReincarcare.click();
 
         //gasim numele produsului
         WebElement elementNumeProdus = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"products\"]/div[1]/ul/li[1]/div/div[2]/a[1]/h2/small")));
@@ -153,14 +153,14 @@ public class VioricaCosmeticTests
         WebElement permiteTotul = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"cs_preview_popup\"]/div/div/div[2]/div[1]/div/div/div[2]/div/button[2]")));
         permiteTotul.click();
         //inchidem newsletter pop-up
-        //ne asiguram ca s-a reincarcat pagina
-        WebElement continut = driver.findElement(By.id("main-content"));
-        wait.until(ExpectedConditions.stalenessOf(continut));
+        WebElement inchiderePopup = driver.findElement(By.className("mc-closeModal"));
+        //asteptam din nou sa se incarce pagina
+        wait.until(ExpectedConditions.stalenessOf(inchiderePopup));
         //miscam mouse-ul ca sa apara popup newsletter
         actions.scrollByAmount(0, 10).build().perform();
-        //inchidem popup
-        WebElement inchiderePopup = wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("mc-closeModal")));
-        inchiderePopup.click();
+        //luam din nou butonul si dam click pe el
+        WebElement inchiderePopupDupaReincarcare = wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("mc-closeModal")));
+        inchiderePopupDupaReincarcare.click();
         
         //gasim imaginea primului produs si dam click pe ea
         List<WebElement> produse = driver.findElements(By.className("link-absolute"));
@@ -188,14 +188,14 @@ public class VioricaCosmeticTests
         WebElement permiteTotul = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"cs_preview_popup\"]/div/div/div[2]/div[1]/div/div/div[2]/div/button[2]")));
         permiteTotul.click();
         //inchidem newsletter pop-up
-        //ne asiguram ca s-a reincarcat pagina
-        WebElement continut = driver.findElement(By.id("main-content"));
-        wait.until(ExpectedConditions.stalenessOf(continut));
+        WebElement inchiderePopup = driver.findElement(By.className("mc-closeModal"));
+        //asteptam din nou sa se incarce pagina
+        wait.until(ExpectedConditions.stalenessOf(inchiderePopup));
         //miscam mouse-ul ca sa apara popup newsletter
         actions.scrollByAmount(0, 10).build().perform();
-        //inchidem popup
-        WebElement inchiderePopup = wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("mc-closeModal")));
-        inchiderePopup.click();
+        //luam din nou butonul si dam click pe el
+        WebElement inchiderePopupDupaReincarcare = wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("mc-closeModal")));
+        inchiderePopupDupaReincarcare.click();
 
         WebElement numeUtilizator = driver.findElement(By.id("username"));
         numeUtilizator.sendKeys("sorana.chiorean+126@gmail.com");
@@ -233,14 +233,14 @@ public class VioricaCosmeticTests
         WebElement permiteTotul = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"cs_preview_popup\"]/div/div/div[2]/div[1]/div/div/div[2]/div/button[2]")));
         permiteTotul.click();
         //inchidem newsletter pop-up
-        //ne asiguram ca s-a reincarcat pagina
-        WebElement continut = driver.findElement(By.id("main-content"));
-        wait.until(ExpectedConditions.stalenessOf(continut));
+        WebElement inchiderePopup = driver.findElement(By.className("mc-closeModal"));
+        //asteptam din nou sa se incarce pagina
+        wait.until(ExpectedConditions.stalenessOf(inchiderePopup));
         //miscam mouse-ul ca sa apara popup newsletter
         actions.scrollByAmount(0, 10).build().perform();
-        //inchidem popup
-        WebElement inchiderePopup = wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("mc-closeModal")));
-        inchiderePopup.click();
+        //luam din nou butonul si dam click pe el
+        WebElement inchiderePopupDupaReincarcare = wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("mc-closeModal")));
+        inchiderePopupDupaReincarcare.click();
 
         //gasim produsul folosind search box
         WebElement searchIcon = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"masthead\"]/div[1]/div/div[1]/div[3]/div/ul/li[2]/a")));

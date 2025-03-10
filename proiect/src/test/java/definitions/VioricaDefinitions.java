@@ -52,14 +52,14 @@ public class VioricaDefinitions {
     @Given("the user closes newsletter popup")
     public void userClosesNewsletterPopup() {
         //inchidem newsletter pop-up
-        //ne asiguram ca s-a reincarcat pagina
-        WebElement continut = driver.findElement(By.id("main-content"));
-        wait.until(ExpectedConditions.stalenessOf(continut));
+        WebElement inchiderePopup = driver.findElement(By.className("mc-closeModal"));
+        //asteptam din nou sa se incarce pagina
+        wait.until(ExpectedConditions.stalenessOf(inchiderePopup));
         //miscam mouse-ul ca sa apara popup newsletter
         actions.scrollByAmount(0, 10).build().perform();
-        //inchidem popup
-        WebElement inchiderePopup = wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("mc-closeModal")));
-        inchiderePopup.click();
+        //luam din nou butonul si dam click pe el
+        WebElement inchiderePopupDupaReincarcare = wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("mc-closeModal")));
+        inchiderePopupDupaReincarcare.click();
     }
 
 //@viorica1 - Register

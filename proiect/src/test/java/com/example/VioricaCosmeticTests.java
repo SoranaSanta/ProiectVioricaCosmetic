@@ -72,11 +72,11 @@ public class VioricaCosmeticTests
         
         //completam formularul de register
         WebElement numeUtilizator = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("nasa_reg_username")));
-        numeUtilizator.sendKeys("SoranaSanta126");
+        numeUtilizator.sendKeys("SoranaSanta127");
         WebElement email = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("nasa_reg_email")));
-        email.sendKeys("sorana.chiorean+126@gmail.com");
+        email.sendKeys("sorana.chiorean+127@gmail.com");
         WebElement parola = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("nasa_reg_password")));
-        parola.sendKeys("Parola126!");
+        parola.sendKeys("Parola127!");
         WebElement dataNasterii = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("account_dob")));
         dataNasterii.sendKeys("10101989");
         //debifam abonarea la newsletter
@@ -200,9 +200,9 @@ public class VioricaCosmeticTests
         inchiderePopupDupaReincarcare.click();
 
         WebElement numeUtilizator = driver.findElement(By.id("username"));
-        numeUtilizator.sendKeys("sorana.chiorean+126@gmail.com");
+        numeUtilizator.sendKeys("sorana.chiorean+127@gmail.com");
         WebElement parola = driver.findElement(By.id("password"));
-        parola.sendKeys("Parola126!");
+        parola.sendKeys("Parola127!");
         WebElement autentificare = driver.findElement(By.cssSelector("button[name=\"login\"]"));
         actions.moveToElement(autentificare).click().perform();
 
@@ -214,11 +214,11 @@ public class VioricaCosmeticTests
 
         //completam parola actuala si cea noua
         WebElement parolaActuala = driver.findElement(By.id("password_current"));
-        parolaActuala.sendKeys("Parola126!");
+        parolaActuala.sendKeys("Parola127!");
         WebElement parolaNoua = driver.findElement(By.id("password_1"));
-        parolaNoua.sendKeys("Parola126@");
+        parolaNoua.sendKeys("Parola127@");
         WebElement confirmareParolaNoua = driver.findElement(By.id("password_2"));
-        confirmareParolaNoua.sendKeys("Parola126@");
+        confirmareParolaNoua.sendKeys("Parola127@");
 
         WebElement salveazaModificarile = driver.findElement(By.name("save_account_details"));
         actions.moveToElement(salveazaModificarile).click().perform();

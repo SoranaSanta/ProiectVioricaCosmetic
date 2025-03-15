@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="14.444" tests="1" skipped="0" failures="0" errors="0">
-<testcase classname="Delivery and Return" name="User clicks delivery and return button and a popup containg the right information appears" time="14.191">
+<testsuite name="Cucumber" time="135.162" tests="5" skipped="0" failures="0" errors="0">
+<testcase classname="Add product to cart" name="User adds to the cart the first product from the &quot;Creme&quot; category" time="24.079">
+<system-out><![CDATA[
+Given the user opens the browser............................................passed
+And the user navigates to the Creme page....................................passed
+And the user accepts cookies................................................passed
+And the user closes newsletter popup........................................passed
+When the user chooses the first product.....................................passed
+And the user adds the product to the cart...................................passed
+Then the correct product name and price will be displayed in the cart.......passed
+And the user closes the browser.............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Delivery and Return" name="User clicks delivery and return button and a popup containg the right information appears" time="19.326">
 <system-out><![CDATA[
 Given the user opens the browser............................................passed
 And the user navigates to the homepage......................................passed
@@ -9,6 +21,44 @@ And the user closes newsletter popup........................................pass
 When the user chooses the first best-seller product.........................passed
 And the user opens the delivery and return popup............................passed
 Then the correct information is displayed...................................passed
+And the user closes the browser.............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Create a new account" name="User is able to create a new account with valid credentials" time="32.075">
+<system-out><![CDATA[
+Given the user opens the browser............................................passed
+And the user navigates to the homepage......................................passed
+And the user accepts cookies................................................passed
+And the user closes newsletter popup........................................passed
+When the user opens the login popup.........................................passed
+And the user opens the register form........................................passed
+And the user completes all the mandatory fields.............................passed
+Then the new account is created.............................................passed
+And the user closes the browser.............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Add a product review" name="User is not able to add a review for a product without score" time="28.563">
+<system-out><![CDATA[
+Given the user opens the browser............................................passed
+And the user navigates to the homepage......................................passed
+And the user accepts cookies................................................passed
+And the user closes newsletter popup........................................passed
+When the user finds the product using the search box........................passed
+And the user opens the review popup.........................................passed
+And the user completes the message and leaves score empty...................passed
+Then the review is not added and error message appears......................passed
+And the user closes the browser.............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Update password" name="User updates their password successfully" time="30.386">
+<system-out><![CDATA[
+Given the user opens the browser............................................passed
+And the user navigates to the edit account page.............................passed
+And the user accepts cookies................................................passed
+And the user closes newsletter popup........................................passed
+When the user logins........................................................passed
+And the user completes all the necessary fields.............................passed
+Then the password is updated successfully...................................passed
 And the user closes the browser.............................................passed
 ]]></system-out>
 </testcase>
